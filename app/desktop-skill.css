@@ -1,0 +1,263 @@
+/* 基础重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+/* 头部样式 */
+.desktop-header {
+    background: #6095f8;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1rem 5%;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.branding img {
+    height: 40px;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav .active {
+    color: #007bff;
+}
+
+/* 主内容区 */
+.desktop-main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+/* 基础样式 */
+body {
+    background:#6095f8 ;
+    color: #333;
+    line-height: 1.6;
+}
+
+.desktop-main {
+    max-width: 1200px;
+    margin: 100px auto 40px;
+    padding: 0 2rem;
+}
+
+/* 技巧卡片布局 */
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.skill-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+/* 通用技巧卡片美化 */
+.tips-section {
+    margin: 4rem 0;
+}
+
+.tips-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.tip-card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 16px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+/* 卡片头部样式 */
+.card-header {
+    background: #33cbf5;
+    padding: 1.5rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.decor-number {
+    font-size: 2rem;
+    opacity: 0.8;
+}
+
+/* 内容区域 */
+.card-content {
+    padding: 2rem;
+}
+
+.tip-item {
+        background: rgba(247,250,252,0.8);
+        border-radius: 12px;
+        padding: 1.2rem;
+        margin-bottom: 1.2rem;
+        transition: transform 0.3s ease;
+    }
+.tip-item:hover {
+        transform: translateX(10px);
+    }
+.tip-index {
+    color: #0072b5;
+    font-size: 1.4rem;
+    min-width: 40px;
+}
+
+/* AI技巧区 */
+.ai-skills {
+    background: rgba(255,255,255,0.9);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.skills-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.skill-category h2 {
+    color: #0072b5;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.check-icon {
+    color: #0072b5;
+    margin-right: 1rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-column {
+        grid-template-columns: 1fr;
+    }
+}
+.tips-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-top: 2rem;
+}
+
+.tip-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+}
+
+.tip-content {
+    position: relative;
+    padding-left: 60px;
+}
+
+.tip-index {
+    position: absolute;
+    left: -15px;
+    top: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgba(0,114,181,0.2);
+}
+
+.chinese {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.english {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .tips-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .tip-content {
+        padding-left: 0;
+    }
+    
+    .tip-index {
+        position: static;
+        margin-bottom: 1rem;
+        color: #0072b5;
+    }
+}
